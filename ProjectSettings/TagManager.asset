@@ -8,6 +8,7 @@ TagManager:
   - Weapon
   - DetectionZone
   - Boome
+  - DetectionZonePlayer
   layers:
   - Default
   - TransparentFX

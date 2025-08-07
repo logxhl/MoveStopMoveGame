@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class HammerBehavior : MonoBehaviour
 {
-    private string detectionZoneTag = "DetectionZone";
+    //private string detectionZoneTag = "DetectionZone";
     private string enemyTag = "Enemy";
     private string playerTag = "Player";
-    private Transform detectionZoneCenter;
+    public Transform detectionZoneCenter;
     private float detectionRadius = 0f;
     public string ownerTag;
     // Start is called before the first frame update
     void Start()
     {
-        GameObject zone = GameObject.FindGameObjectWithTag(detectionZoneTag);
-        if(zone != null)
+        //GameObject zone = GameObject.FindGameObjectWithTag(detectionZoneTag);
+
+        if (detectionZoneCenter != null)
         {
-            detectionZoneCenter = zone.transform;
-            SphereCollider col = zone.GetComponent<SphereCollider>();
-            if(col != null)
+            SphereCollider col = detectionZoneCenter.GetComponent<SphereCollider>();
+            if (col != null)
             {
-                detectionRadius = col.radius * zone.transform.lossyScale.x;
+                detectionRadius = col.radius * detectionZoneCenter.lossyScale.x;
             }
         }
         else
@@ -32,10 +32,11 @@ public class HammerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(detectionZoneCenter != null)
+        if (detectionZoneCenter != null)
         {
             float distane = Vector3.Distance(transform.position, detectionZoneCenter.position);
-            if(distane > detectionRadius)
+
+            if (distane > detectionRadius)
             {
                 Destroy(gameObject);
             }
@@ -43,7 +44,7 @@ public class HammerBehavior : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(ownerTag == playerTag && other.CompareTag(enemyTag))
+        if (ownerTag == playerTag && other.CompareTag(enemyTag))
         {
             Destroy(gameObject);
             Destroy(other.gameObject);

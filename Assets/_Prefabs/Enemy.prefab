@@ -1689,7 +1689,7 @@ MonoBehaviour:
   throwPoint: {fileID: 1604436044824067684}
   throwForce: 5
   handHammer: {fileID: 546321402212032407}
-  isPlayer: 1
+  isPlayer: 0
   animPlayer: {fileID: 1799655827954509128}
 --- !u!1 &5612562073526462782
 GameObject:
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 15
-  minDistance: 4
+  minDistance: 2
   speed: 3
   player: {fileID: 0}
   detectionZone: {fileID: 2554007712350432659}

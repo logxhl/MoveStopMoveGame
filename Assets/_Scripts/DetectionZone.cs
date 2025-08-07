@@ -67,6 +67,8 @@ public class DetectionZone : MonoBehaviour
             if (target == null || !target.gameObject.activeInHierarchy)
             {
                 TryThrowNext();
+    
+                
                 return;
             }
             StartCoroutine(ThrowHammerAtTarget(target.position));

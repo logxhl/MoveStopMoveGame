@@ -517,7 +517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8bbd6861f72694687c2470f713a4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2234416154641345924, guid: 4f5de0115d2ae574cbe9a41d6462c6bc, type: 3}
+  enemyPrefab: {fileID: 5612562073526462782, guid: 1ef8a55ef6e735e42908a66467ba5cc1, type: 3}
   spawnInterval: 3
   spawnAreaMin: {x: -10, y: -10}
   spawnAreaMax: {x: 10, y: 10}
@@ -1620,8 +1620,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1580484941}
     - target: {fileID: 3443651379802284212, guid: 57f8c3c36c1f34f408ec632142c5e9fc, type: 3}
+      propertyPath: m_Name
+      value: DetectionZone1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443651379802284212, guid: 57f8c3c36c1f34f408ec632142c5e9fc, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3443651379802284212, guid: 57f8c3c36c1f34f408ec632142c5e9fc, type: 3}
+      propertyPath: m_TagString
+      value: DetectionZone
       objectReference: {fileID: 0}
     - target: {fileID: 5021517216359056329, guid: 57f8c3c36c1f34f408ec632142c5e9fc, type: 3}
       propertyPath: m_LocalPosition.x

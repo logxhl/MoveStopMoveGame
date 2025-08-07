@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject enemyPrefab;
-    public float spawnInterval = 3f;
+    public float spawnInterval = 10f;
     public Vector2 spawnAreaMin;
     public Vector2 spawnAreaMax;
     public float spawnY = 0.66f;
