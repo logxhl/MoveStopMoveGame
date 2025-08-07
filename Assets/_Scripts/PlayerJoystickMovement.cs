@@ -45,6 +45,7 @@ public class PlayerControllerJoystick : MonoBehaviour
         if(other.CompareTag("Boome"))
         {
             deathScene.SetActive(true);
+            SpawnEnemy.Instance.canSpawn = false;
             //Destroy(other.gameObject);
             //Destroy(gameObject);
             //Time.timeScale = 0f;

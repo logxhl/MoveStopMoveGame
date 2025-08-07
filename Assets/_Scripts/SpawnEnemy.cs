@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    public static SpawnEnemy Instance { get; private set; } 
     public GameObject enemyPrefab;
     public float spawnInterval = 3f;
     public Vector2 spawnAreaMin;
     public Vector2 spawnAreaMax;
     public float spawnY = 0.66f;
+    public bool canSpawn = true;
     // Start is called before the first frame update
     void Start()
     {
+        Instance = this;
         InvokeRepeating(nameof(SpawnEnemyPrefab), 3f, spawnInterval);
     }
     void SpawnEnemyPrefab()
     {
+        if(!canSpawn) { return; }
         Vector3 randomPos = GetRandomPosition();
         Instantiate(enemyPrefab, randomPos, Quaternion.identity);
     }
