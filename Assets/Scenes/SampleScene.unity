@@ -1692,10 +1692,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2139444252708817332, guid: 1ef8a55ef6e735e42908a66467ba5cc1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554007712350432659, guid: 1ef8a55ef6e735e42908a66467ba5cc1, type: 3}
+      propertyPath: isPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3691102462758689295, guid: 1ef8a55ef6e735e42908a66467ba5cc1, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 142221030}
+    - target: {fileID: 3691102462758689295, guid: 1ef8a55ef6e735e42908a66467ba5cc1, type: 3}
+      propertyPath: minDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4766199901305924760, guid: 1ef8a55ef6e735e42908a66467ba5cc1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5612562073526462782, guid: 1ef8a55ef6e735e42908a66467ba5cc1, type: 3}
       propertyPath: m_Name
       value: Enemy

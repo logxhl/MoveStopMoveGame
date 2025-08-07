@@ -53,12 +53,13 @@ public class EnemyController : MonoBehaviour
 
         }
     }
-
+    /// <summary>
+    /// Stop Moving Enemy
+    /// </summary>
     private void StopMoving()
     {
         anim.SetBool("IsRun", false);
         anim.SetBool("IsIdle", true);
-
     }
 
     private void MoveToPlayer()
