@@ -9,6 +9,7 @@ public class PlayerControllerJoystick : MonoBehaviour
     public Rigidbody rb;
     public FixedJoystick joystick;
     private Vector3 movement;
+    public GameObject deathScene;
 
     void Start()
     {
@@ -38,4 +39,17 @@ public class PlayerControllerJoystick : MonoBehaviour
             rb.MoveRotation(Quaternion.Slerp(rb.rotation, toRotation, 0.1f));
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Boome"))
+        {
+            deathScene.SetActive(true);
+            //Destroy(other.gameObject);
+            //Destroy(gameObject);
+            //Time.timeScale = 0f;
+        }
+    }
+
+
 }

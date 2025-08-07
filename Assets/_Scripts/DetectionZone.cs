@@ -67,8 +67,8 @@ public class DetectionZone : MonoBehaviour
             if (target == null || !target.gameObject.activeInHierarchy)
             {
                 TryThrowNext();
-    
-                
+
+
                 return;
             }
             StartCoroutine(ThrowHammerAtTarget(target.position));
@@ -108,6 +108,13 @@ public class DetectionZone : MonoBehaviour
         GameObject hammer = Instantiate(hammerPrefab, throwPoint.position, Quaternion.identity);
         Rigidbody rb = hammer.GetComponent<Rigidbody>();
 
+        HammerBehavior hammerScript = hammer.GetComponent<HammerBehavior>();
+        if (hammerScript != null)
+        {
+            hammerScript.SetOwner(transform.root.gameObject); // Quan trọng!
+            hammerScript.SetMaxDistance(2f); // Tùy chỉnh khoảng cách
+        }
+
         if (rb != null)
         {
             rb.useGravity = false;
@@ -130,7 +137,7 @@ public class DetectionZone : MonoBehaviour
 
         canThrow = true;
 
-        if(isPlayer)
+        if (isPlayer)
         {
             TryThrowNext();
         }

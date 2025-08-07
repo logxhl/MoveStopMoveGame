@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5048666934400769457}
   - component: {fileID: -2912228604316471332}
   - component: {fileID: 3097280782783306867}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: boomerang
   m_TagString: Boome
   m_Icon: {fileID: 0}
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -2.9118, y: 0.25, z: -0.9564055}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,8 +106,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.047150586, y: 0.09565167, z: 0.007876435}
-  m_Center: {x: 0.023739867, y: 0, z: 0}
+  m_Size: {x: 0.07240875, y: 0.07249073, z: 0.007876434}
+  m_Center: {x: -0.0044833543, y: 0.0042654974, z: 3.1361527e-17}
 --- !u!54 &5048666934400769457
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -148,6 +148,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownerTag: Enemy
+  owner: {fileID: 0}
+  maxDistance: 10
+  showDebugInfo: 1
 --- !u!114 &3097280782783306867
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 1812034669646519280}
   - component: {fileID: 665297952476921573}
   - component: {fileID: 5449522938879032354}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DetectionZone
   m_TagString: DetectionZone
   m_Icon: {fileID: 0}
@@ -218,10 +218,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 641896751fbd26a44b8eeb920cc1191d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hammerPrefab: {fileID: 100000, guid: 6d5a344a4a9039645b1f8902f60e28d1, type: 3}
+  hammerPrefab: {fileID: 4697807817249957956, guid: 7682d18a701b4724c83798199a5a6832, type: 3}
   throwPoint: {fileID: 2173011700044044960}
   throwForce: 5
   handHammer: {fileID: 6689711378262660665}
+  isPlayer: 1
   animPlayer: {fileID: 3114802694456585907}
 --- !u!1 &6689711378262660665
 GameObject:
@@ -1091,10 +1092,10 @@ PrefabInstance:
       addedObject: {fileID: 445461297217951098}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 38f9296dc39c27647a0119314baf12a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7441352176595411377}
+      addedObject: {fileID: 2059640126942592677}
     - targetCorrespondingSourceObject: {fileID: -927199367670048503, guid: 38f9296dc39c27647a0119314baf12a2, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2059640126942592677}
+      addedObject: {fileID: 6777057008672378528}
   m_SourcePrefab: {fileID: 100100000, guid: 38f9296dc39c27647a0119314baf12a2, type: 3}
 --- !u!95 &3114802694456585907 stripped
 Animator:
@@ -1143,7 +1144,24 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!65 &7441352176595411377
+--- !u!114 &2059640126942592677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8352869531848405466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2af20b56ca324429c61871051864ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  anim: {fileID: 3114802694456585907}
+  rb: {fileID: 445461297217951098}
+  joystick: {fileID: 0}
+  deathScene: {fileID: 0}
+--- !u!65 &6777057008672378528
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1162,21 +1180,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.492885, z: 1}
-  m_Center: {x: 0, y: 1.0956285, z: 0}
---- !u!114 &2059640126942592677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8352869531848405466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb2af20b56ca324429c61871051864ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  anim: {fileID: 3114802694456585907}
-  rb: {fileID: 445461297217951098}
-  joystick: {fileID: 0}
+  m_Size: {x: 1, y: 2.4530134, z: 1}
+  m_Center: {x: 0, y: 1.0923657, z: -0}

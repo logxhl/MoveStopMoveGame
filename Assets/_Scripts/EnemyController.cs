@@ -31,14 +31,14 @@ public class EnemyController : MonoBehaviour
             StopMoving();
             return;
         }
-        else if(distance > minDistance)
+        else if (distance > minDistance)
         {
             MoveToPlayer();
         }
         else
         {
             StopMoving();
-            if(detectionZone != null && detectionZone.CanAttack())
+            if (detectionZone != null && detectionZone.CanAttack())
             {
                 detectionZone.ThrowHammerAt(player.position);
                 anim.SetBool("IsAttack", true);
@@ -47,7 +47,7 @@ public class EnemyController : MonoBehaviour
 
         Vector3 direction = (player.position - transform.position).normalized;
         direction.y = 0;
-        if(direction != Vector3.zero)
+        if (direction != Vector3.zero)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 5f);
 
@@ -74,6 +74,6 @@ public class EnemyController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position,minDistance);
+        Gizmos.DrawWireSphere(transform.position, minDistance);
     }
 }

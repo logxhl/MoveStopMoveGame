@@ -162,3 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownerTag: Player
+  owner: {fileID: 0}
+  maxDistance: 10
+  showDebugInfo: 1
